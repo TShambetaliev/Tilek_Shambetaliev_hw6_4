@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Tilek_Shambetaliev_hw6_4</string>
+    <string name="playlist">playlist</string>
+    <string name="back_videos_activity">back_videos_activity</string>
+    <string name="playlist_videos_activity">playlist_videos_activity</string>
+    <string name="title">title</string>
+    <string name="description">description</string>
+    <string name="count_of_videos_series">count_of_videos_series</string>
+    <string name="no_connection">no_connection</string>
+    <string name="again">again</string>
+</resources>
