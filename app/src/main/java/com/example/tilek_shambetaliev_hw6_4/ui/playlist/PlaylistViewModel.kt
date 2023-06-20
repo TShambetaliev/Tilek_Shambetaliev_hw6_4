@@ -8,6 +8,7 @@ import com.example.tilek_shambetaliev_hw6_4.data.remote.model.PlayLists
 import com.example.tilek_shambetaliev_hw6_4.data.remote.ApiService
 import com.example.tilek_shambetaliev_hw6_4.data.remote.RetrofitClient
 import retrofit2.Call
+import retrofit2.Callback
 import retrofit2.Response
 
 
@@ -23,8 +24,8 @@ class PlaylistViewModel : BaseViewModel() {
         val data = MutableLiveData<PlayLists>()
 
         apiService.getPlaylists(
-            "snippet,contentDetails", "UCWOA1ZGywLbqmigxE4Qlvuw", BuildConfig.API_KEY,30
-        ).enqueue(object : retrofit2.Callback<PlayLists> {
+            BuildConfig.API_KEY, "snippet,contentDetails", "UCWOA1ZGywLbqmigxE4Qlvuw"
+        ).enqueue(object : Callback<PlayLists> {
             override fun onResponse(call: Call<PlayLists>, response: Response<PlayLists>) {
                 if (response.isSuccessful) {
                     data.value = response.body()
@@ -32,7 +33,7 @@ class PlaylistViewModel : BaseViewModel() {
             }
 
             override fun onFailure(call: Call<PlayLists>, t: Throwable) {
-                print(t.stackTrace)
+                println(t.stackTrace)
             }
         })
         return data

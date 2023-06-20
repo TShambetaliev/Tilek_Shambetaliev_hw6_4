@@ -8,4 +8,6 @@
     <string name="count_of_videos_series">count_of_videos_series</string>
     <string name="no_connection">no_connection</string>
     <string name="again">again</string>
+    <string name="video_time">video_time</string>
+    <string name="title_text">Title text</string>
 </resources>
